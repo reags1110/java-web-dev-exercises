@@ -10,6 +10,26 @@ public class Course {
     private String courseDate;
     private String teacher;
 
+    @Override
+    public String toString() {
+        return "Course{" +
+                "students=" + students +
+                ", courseName='" + courseName + '\'' +
+                ", crn=" + crn +
+                ", courseTime='" + courseTime + '\'' +
+                ", courseDate='" + courseDate + '\'' +
+                ", teacher='" + teacher + '\'' +
+                '}';
+    }
+
+    public HashMap<String, Integer> getStudents() {
+        return students;
+    }
+
+    public void setStudents(HashMap<String, Integer> students) {
+        this.students = students;
+    }
+
     public Course(String courseName, double crn, String courseTime, String courseDate, String teacher) {
         this.courseName = courseName;
         this.crn = crn;
