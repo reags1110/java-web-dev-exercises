@@ -4,6 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
         Car car = new Car("Toyota", "Prius", 10, 50);
-        System.out.println(car.getMake() + " - " + car.getModel());
+        System.out.println(car.getMake() + " - " + car.getModel() + " - " +
+                car.getGasTankSize() +" - " + car.getMilesPerGallon() +
+                " - " + car.getGasTankLevel());
+
+        car.drive(200);
+        System.out.println(car.getMake() + " - " + car.getModel() + " - " +
+                car.getGasTankSize() +" - " + car.getMilesPerGallon() +
+                " - " + car.getGasTankLevel());
     }
 }
