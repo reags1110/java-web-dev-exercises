@@ -14,13 +14,13 @@ public class CarTest {
 
     @Before
     public void c() {
-        test_car = new Car("Toyota", "Parus", 10, 50);
+        test_car = new Car("Toyota", "Prius", 10, 50);
     }
 
-//    @After
-//    public void method(){
-//        test_car = new Car("Toyota", "Parus", 10, 50);
-//    }
+    @After
+    public void method(){
+        test_car = new Car("Toyota", "Prius", 10, 50);
+    }
 
     //TODO: add emptyTest so we can configure our runtime environment (remove this test before pushing to your personal GitLab account)
     @Test
@@ -44,7 +44,7 @@ public class CarTest {
     @Test
     public void testGasTankLevel1() {
         test_car.drive(200);
-        assertTrue("true", test_car.getGasTankLevel() == 6);
+        assertEquals("true", 6, test_car.getGasTankLevel(), 0.0);
     }
 
     //TODO: gasTankLevel is accurate after attempting to drive past tank range
@@ -57,7 +57,7 @@ public class CarTest {
     @Test
     public void testGasTankAfterDriving1() {
         test_car.drive(50);
-        assertTrue("true", test_car.getGasTankLevel() == 9);
+        assertEquals("true", 9, test_car.getGasTankLevel(), 0.0);
     }
 
     //TODO: can't have more gas than tank size, expect an exception

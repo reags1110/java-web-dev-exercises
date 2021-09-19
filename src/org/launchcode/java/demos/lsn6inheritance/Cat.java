@@ -14,6 +14,7 @@ public class Cat {
     }
 
     /**** Getters and Setters ****/
+    public Cat () { weight = 13;}
 
     public boolean isTired() {
         return tired;
@@ -65,4 +66,5 @@ public class Cat {
     public String noise () {
         return "Meeeeeeooooowww!";
     }
+
 }
